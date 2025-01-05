@@ -9,13 +9,33 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AIStyleManager.cpp \
+    BorderManager.cpp \
+    EditableTextItem.cpp \
+    ImageEditCommand.cpp \
+    MyGraphicsView.cpp \
+    TextManager.cpp \
     main.cpp \
     imagestyleeditor.cpp
 
 HEADERS += \
+    AIStyleManager.h \
+    BorderManager.h \
+    EditableTextItem.h \
+    ImageEditCommand.h \
+    MyGraphicsView.h \
+    NonInteractivePixmapItem.h \
+    TextManager.h \
     imagestyleeditor.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L"D:/opencv/opencv/build/x64/vc16/lib/" -lopencv_world4100
+else:win32:CONFIG(debug, debug|release): LIBS += -L"D:/opencv/opencv/build/x64/vc16/lib/" -lopencv_world4100
+
+
+INCLUDEPATH += D:/opencv/opencv/build/include
+DEPENDPATH += D:/opencv/opencv/build/include

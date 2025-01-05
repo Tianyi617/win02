@@ -1,0 +1,11 @@
+release/AIStyleManager.o
+release/BorderManager.o
+release/EditableTextItem.o
+release/ImageEditCommand.o
+release/MyGraphicsView.o
+release/TextManager.o
+release/main.o
+release/imagestyleeditor.o
+release/moc_EditableTextItem.o
+release/moc_MyGraphicsView.o
+release/moc_imagestyleeditor.o
